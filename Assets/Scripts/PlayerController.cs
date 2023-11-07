@@ -64,9 +64,9 @@ namespace ShadowChimera
 			float targetSpeed = 0f;
 			float speed = 0;
 			float inputMagnitude = move.magnitude; //длина вектора, чем больше длина тем больше скорость
-                                          //есть еще rb.velocity возвращает вектор сколько единиц проходим
-                                          //по каждой переменной, если использовать rb.velocity.magnitude
-                                          //то получаем скорость
+												   //есть еще rb.velocity возвращает вектор сколько единиц проходим
+												   //по каждой переменной, если использовать rb.velocity.magnitude
+												   //то получаем скорость
 
 			if (inputMagnitude != 0)
 			{
@@ -101,12 +101,14 @@ namespace ShadowChimera
 				//новый нормализованный вектор с длинной 1 но с тем же направлением 
 				Vector3 inputDirection = new Vector3(move.x, 0f, move.y).normalized;
 				
-				//посчитали тангенс между x и z, перевели в градусы и добавили ротейшн по камере y
+				//посчитали тангенс между x и z, перевели в градусы и добавили ротейшн по камере
+				//тангенс чтобы понять направление взгляда через инпут мыши 
 				m_targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + m_cameraTransform.eulerAngles.y;
-				
-				//вычисляем ротейшн
-				//что то типа лерпа но для градусов ?ref?
-				float rotation = Mathf.SmoothDampAngle(targetTr.eulerAngles.y, m_targetRotation, ref m_rotationVelocity, m_rotationSmoothTime);
+
+                //вычисляем ротейшн
+                //что то типа лерпа но для градусов
+                //m_rotationVelocity - погрешность, вспомогательный вектор
+                float rotation = Mathf.SmoothDampAngle(targetTr.eulerAngles.y, m_targetRotation, ref m_rotationVelocity, m_rotationSmoothTime);
 				
 				//меняем сам ротейшн
 				targetTr.rotation = Quaternion.Euler(0f, rotation, 0f);
@@ -157,5 +159,11 @@ namespace ShadowChimera
 			//либо большее если больше промежутка
 			return Mathf.Clamp(angle, min, max);
 		}
+
+		private void Dash()
+		{
+
+		}
+
 	}
 }
