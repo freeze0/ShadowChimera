@@ -133,14 +133,14 @@ namespace ShadowChimera
 				float deltaTimeMultiplier = m_speedRotation * Time.deltaTime;
 
 				m_cameraTargetYaw += look.x * deltaTimeMultiplier; //поворот влево вправо
-				//m_cameraTargetPitch += look.y * deltaTimeMultiplier; //наклон вперед назад
+				m_cameraTargetPitch += look.y * deltaTimeMultiplier; //наклон вперед назад
 			}
 			
 			//ограничение камеры по x и y 
 			m_cameraTargetYaw = ClampAngle(m_cameraTargetYaw, float.MinValue, float.MaxValue);
-			//m_cameraTargetPitch = ClampAngle(m_cameraTargetPitch, m_bottomClamp, m_topClamp);
+			m_cameraTargetPitch = ClampAngle(m_cameraTargetPitch, m_bottomClamp, m_topClamp);
 			
-			m_cameraTarget.rotation = Quaternion.Euler(0 /*m_cameraTargetPitch*/, m_cameraTargetYaw, 0f);
+			m_cameraTarget.rotation = Quaternion.Euler(/*0*/ m_cameraTargetPitch, m_cameraTargetYaw, 0f);
 		}
 
 		private static float ClampAngle(float angle, float min, float max)
