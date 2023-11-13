@@ -8,7 +8,7 @@ namespace ShadowChimera
     public class FindTargetAction : ActionNode
     {
         private SearcherTarget m_searcherTarget;
-        public float maxDistance = 10;
+        //public float maxDistance = 10;
 
         protected override void OnStart()
         {
@@ -37,7 +37,7 @@ namespace ShadowChimera
             
             if (blackboard.target)
             {
-                Debug.Log("Если функция вернула не null и поменяли таргет позицию");
+                //Debug.Log("Если функция вернула не null и поменяли таргет позицию");
                 blackboard.moveToPosition = blackboard.target.position;
                 return State.Success;
             }

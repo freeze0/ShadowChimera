@@ -23,8 +23,7 @@ namespace ShadowChimera
 		private float m_cameraTargetPitch;
 		private float m_rotationVelocity;
 		private float m_targetRotation;
-
-		//Input
+		
 		private InputActionMap m_playerMap;
 		private InputAction m_moveAction;
 		private InputAction m_lookAction;
