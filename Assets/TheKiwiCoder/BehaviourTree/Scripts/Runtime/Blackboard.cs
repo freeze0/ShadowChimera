@@ -10,10 +10,7 @@ namespace TheKiwiCoder {
     [System.Serializable]
 	public class Blackboard
 	{
-        public int indexOfPosition;
-        public Transform[] positions;
 		public Transform target;
 		public Vector3 moveToPosition;
-
     }
 }
