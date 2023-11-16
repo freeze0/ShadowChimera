@@ -12,5 +12,6 @@ namespace TheKiwiCoder {
 	{
 		public Transform target;
 		public Vector3 moveToPosition;
-    }
+		public bool isTouchingPlayer;
+	}
 }

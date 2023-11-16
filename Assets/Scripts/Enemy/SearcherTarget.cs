@@ -8,8 +8,9 @@ namespace ShadowChimera
     {
         [SerializeField] private float m_radius;
         [SerializeField] private LayerMask m_layerMask;
-
         private Collider[] m_result = new Collider[4];
+
+        public float radius => m_radius;
 
         public Transform FindTarget()
         {

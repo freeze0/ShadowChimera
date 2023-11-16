@@ -38,8 +38,9 @@ MonoBehaviour:
   blackboard:
     target: {fileID: 0}
     moveToPosition: {x: 100, y: 0, z: 0}
-  viewPosition: {x: 131, y: 112, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+    isTouchingPlayer: 0
+  viewPosition: {x: 167, y: 194, z: 0}
+  viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
     RefIds:
@@ -53,6 +54,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
     - rid: 4200190926137589867
@@ -65,6 +67,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: Where it all begins!
         drawGizmos: 0
         child:
@@ -79,6 +82,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: Repeat forever
         drawGizmos: 0
         child:
@@ -95,6 +99,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         stoppingDistance: 0.1
@@ -108,6 +113,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         children:
@@ -123,6 +129,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         children:
@@ -140,6 +147,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         children:
@@ -156,6 +164,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
     - rid: 5970866292629438470
@@ -168,6 +177,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         message: Try to attack
@@ -181,6 +191,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         children:
@@ -197,6 +208,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         children:
@@ -212,6 +224,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         child:
@@ -228,6 +241,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         child:
@@ -244,6 +258,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         message: Patrol
@@ -257,9 +272,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
-        spotRange: 10
         attackRange: 2
     - rid: 5970866357830418437
       type: {class: LookAtTarget, ns: ShadowChimera.AI, asm: Assembly-CSharp}
@@ -271,6 +286,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
     - rid: 5970866357830418441
@@ -283,6 +299,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         duration: 1.5
@@ -296,6 +313,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         message: Found Target
@@ -309,6 +327,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          isTouchingPlayer: 0
         description: 
         drawGizmos: 0
         duration: 0.1

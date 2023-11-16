@@ -1,17 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TheKiwiCoder;
+using Unity.VisualScripting;
 using UnityEngine.Serialization;
 
 [System.Serializable]
 public class ChasePlayer : ActionNode
 {
-	public float spotRange = 10.0f;
+	//public float spotRange = 10.0f;
 	public float attackRange = 2f;
 	
 	protected override void OnStart()
 	{
+		blackboard.isTouchingPlayer = false;
 		context.agent.isStopped = false;
 		context.agent.stoppingDistance = attackRange;
 		context.agent.SetDestination(blackboard.target.position);
@@ -26,10 +29,10 @@ public class ChasePlayer : ActionNode
 	{
 		var agent = context.agent;
 		agent.isStopped = false;
-		if (agent.remainingDistance > spotRange)
+		/*if (agent.remainingDistance > spotRange)
 		{
 			return State.Failure;
-		}
+		}*/
 
 		if (agent.pathPending)
 		{
@@ -41,11 +44,18 @@ public class ChasePlayer : ActionNode
 			return State.Failure;
 		}
 		
-		/*if (agent.remainingDistance > attackRange)
+		if (agent.remainingDistance <= attackRange)
 		{
-			return State.Running;
-		}*/
+			blackboard.isTouchingPlayer = true;
+		}
 		
 		return State.Success;
 	}
+
+	
+	/*private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.green;
+		Gizmos.DrawSphere(context.agent.transform.position, attackRange);
+	}*/
 }
