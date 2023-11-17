@@ -39,7 +39,8 @@ MonoBehaviour:
     target: {fileID: 0}
     moveToPosition: {x: 100, y: 0, z: 0}
     isTouchingPlayer: 0
-  viewPosition: {x: 167, y: 194, z: 0}
+    attackRange: 2
+  viewPosition: {x: 164, y: 229, z: 0}
   viewScale: {x: 0.49717674, y: 0.49717674, z: 1}
   references:
     version: 2
@@ -55,6 +56,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
     - rid: 4200190926137589867
@@ -68,6 +70,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: Where it all begins!
         drawGizmos: 0
         child:
@@ -83,6 +86,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: Repeat forever
         drawGizmos: 0
         child:
@@ -100,6 +104,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         stoppingDistance: 0.1
@@ -114,6 +119,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -130,6 +136,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -148,6 +155,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -165,6 +173,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
     - rid: 5970866292629438470
@@ -178,6 +187,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         message: Try to attack
@@ -192,6 +202,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -209,6 +220,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -225,6 +237,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         child:
@@ -242,6 +255,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         child:
@@ -259,6 +273,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         message: Patrol
@@ -273,6 +288,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         attackRange: 2
@@ -287,6 +303,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
     - rid: 5970866357830418441
@@ -300,6 +317,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         duration: 1.5
@@ -314,6 +332,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         message: Found Target
@@ -328,6 +347,7 @@ MonoBehaviour:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
+          attackRange: 2
         description: 
         drawGizmos: 0
         duration: 0.1
