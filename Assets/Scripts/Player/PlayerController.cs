@@ -10,6 +10,7 @@ namespace ShadowChimera
 		[SerializeField] private CharacterController m_characterController;
 		[SerializeField] private Transform m_cameraTarget;
 		[SerializeField] private Transform m_cameraTransform;
+		/*[SerializeField] private EnemyAttack m_attack;*/
 		
 		[SerializeField] private float m_rotationSmoothTime = 0.12f;
 		[SerializeField] private float m_speedChangeRate = 10f;
@@ -27,6 +28,7 @@ namespace ShadowChimera
 		private InputActionMap m_playerMap;
 		private InputAction m_moveAction;
 		private InputAction m_lookAction;
+		/*private InputAction m_attackAction;*/
 
 
 		private void Awake()
@@ -34,16 +36,19 @@ namespace ShadowChimera
 			m_playerMap = m_inputActionAsset.FindActionMap("Player");
 			m_moveAction = m_playerMap.FindAction("Move");
 			m_lookAction = m_playerMap.FindAction("Look");
+			/*m_attackAction = m_playerMap.FindAction("Fire");*/
 		}
 
 		private void OnEnable()
 		{
 			m_playerMap.Enable();
+			//m_attackAction.performed += context => m_attack.Shoot();
 		}
 
 		private void OnDisable()
 		{
 			m_playerMap.Disable();
+			//m_attackAction.performed -= context => m_attack.Shoot();
 		}
 
 		private void Update()
