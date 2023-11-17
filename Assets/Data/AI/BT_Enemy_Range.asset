@@ -42,9 +42,10 @@ MonoBehaviour:
   blackboard:
     target: {fileID: 0}
     moveToPosition: {x: 100, y: 0, z: 0}
+    startPos: {x: -55.79, y: 0, z: 63.21}
     isTouchingPlayer: 0
     attackRange: 7.7
-  viewPosition: {x: 135, y: -41, z: 0}
+  viewPosition: {x: 119, y: 135, z: 0}
   viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2
@@ -59,6 +60,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -73,6 +75,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -90,6 +93,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: Where it all begins!
@@ -106,6 +110,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: Repeat forever
@@ -120,10 +125,11 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 6d43e0274b9a6b647a32a83ae71f5c62
-        position: {x: 1434.9999, y: 332}
+        position: {x: 1435, y: 332}
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -139,6 +145,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -156,6 +163,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -175,6 +183,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: FindTarget
@@ -192,6 +201,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -206,6 +216,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: Chasing
@@ -223,6 +234,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -240,6 +252,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -255,6 +268,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -270,6 +284,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -284,6 +299,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -299,6 +315,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: Wait for refresh target position
@@ -314,6 +331,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -331,6 +349,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 'Attack
@@ -350,6 +369,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: Wait before attack
@@ -365,6 +385,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -380,6 +401,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -395,6 +417,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 
@@ -413,6 +436,7 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
+          startPos: {x: 0, y: 0, z: 0}
           isTouchingPlayer: 0
           attackRange: 2
         description: 

@@ -12,6 +12,7 @@ namespace TheKiwiCoder {
 	{
 		public Transform target;
 		public Vector3 moveToPosition;
+		public Vector3 startPos;
 		public bool isTouchingPlayer;
         public float attackRange = 2f;
     }

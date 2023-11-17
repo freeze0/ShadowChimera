@@ -7,7 +7,7 @@ using TheKiwiCoder;
 public class MoveToPosition : ActionNode
 {
 	public float stoppingDistance = 0.1f;
-
+	
 	protected override void OnStart()
 	{
 		context.agent.isStopped = false;
@@ -22,8 +22,8 @@ public class MoveToPosition : ActionNode
 
 	protected override State OnUpdate()
 	{
-		context.agent.isStopped = false;
 		
+		context.agent.isStopped = false;
 		if (context.agent.pathPending)
 		{
 			return State.Running;
@@ -38,7 +38,6 @@ public class MoveToPosition : ActionNode
 		{
 			return State.Failure;
 		}
-
 		return State.Running;
 	}
 }

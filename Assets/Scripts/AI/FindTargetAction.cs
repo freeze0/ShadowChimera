@@ -8,7 +8,6 @@ namespace ShadowChimera
     public class FindTargetAction : ActionNode
     {
         private SearcherTarget m_searcherTarget;
-        //public float maxDistance = 10;
 
         protected override void OnStart()
         {
