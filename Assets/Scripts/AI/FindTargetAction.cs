@@ -7,14 +7,8 @@ namespace ShadowChimera
 {
     public class FindTargetAction : ActionNode
     {
-        private SearcherTarget m_searcherTarget;
-
         protected override void OnStart()
         {
-            if (m_searcherTarget == null)
-            {
-                m_searcherTarget = context.gameObject.GetComponent<SearcherTarget>();
-            }
         }
 
         protected override void OnStop()
@@ -23,8 +17,7 @@ namespace ShadowChimera
 
         protected override State OnUpdate()
         {
-            blackboard.target = m_searcherTarget.FindTarget();
-            
+            blackboard.target = context.searcherTarget.FindTarget();
             if (blackboard.target)
             {
                 blackboard.moveToPosition = blackboard.target.position;

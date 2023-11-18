@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,9 +14,9 @@ namespace ShadowChimera
             Destroy(gameObject, lifeTime);
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (collision.collider.CompareTag("Player"))
+            if (other.CompareTag("Player"))
             {
                 Debug.Log("Попал!");
             }

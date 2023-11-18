@@ -5,8 +5,12 @@ namespace ShadowChimera.AI
 {
 	public class LookAtTarget : ActionNode
 	{
+		private LayerMask m_layerMask;
+		private Transform m_agentTransform;
 		protected override void OnStart()
 		{
+			m_layerMask = LayerMask.GetMask("Projectile");
+			m_agentTransform = context.agent.transform;
 		}
 
 		protected override void OnStop()
@@ -15,7 +19,28 @@ namespace ShadowChimera.AI
 
 		protected override State OnUpdate()
 		{
-			// Сделать плавный поворот к целе
+			RaycastHit hit;
+			Vector3 fwd = m_agentTransform.TransformDirection(Vector3.forward);
+			if (Physics.Raycast( m_agentTransform.position,  
+				    m_agentTransform.TransformDirection(Vector3.forward), out hit, 100))
+			{
+				if (hit.transform.CompareTag("Player"))
+				{
+					blackboard.attackRange = blackboard.reserveAttackRange;
+					Debug.DrawRay(m_agentTransform.position, 
+						m_agentTransform.TransformDirection(Vector3.forward) * 100, Color.red);
+					Debug.Log("Did not Hit");
+				}
+				else
+				{
+					blackboard.attackRange = 0.1f;
+					Debug.DrawRay(m_agentTransform.position, 
+						m_agentTransform.TransformDirection(Vector3.forward) * hit.distance, Color.white);
+					Debug.Log("Did Hit");
+				}
+			}
+			
+			//плавный поворот доделать
 			var targetPosition = blackboard.target.position;
 			targetPosition.y = context.transform.position.y;
 			context.transform.LookAt(targetPosition, Vector3.up);

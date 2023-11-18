@@ -6,9 +6,9 @@ namespace ShadowChimera
 {
     public class EnemyAttack : MonoBehaviour
     {
-        public Transform projectileSpawnPoint;
-        public GameObject projectilePrefab;
-        public float projectileSpeed;
+        [SerializeField] private Transform projectileSpawnPoint;
+        [SerializeField] private GameObject projectilePrefab;
+        [SerializeField] private float projectileSpeed;
 
         public void Shoot() 
         {

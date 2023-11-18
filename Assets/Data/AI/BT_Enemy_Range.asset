@@ -34,20 +34,20 @@ MonoBehaviour:
   - rid: 5970866365120905220
   - rid: 5970866365120905221
   - rid: 5970866365120905222
-  - rid: 5970866365120905232
   - rid: 5970866365120905235
   - rid: 5970866387741573125
   - rid: 3643188194731098119
   - rid: 5970866410769088513
   - rid: 5970866410769088516
+  - rid: 5970866422736486402
   treeState: 0
   blackboard:
     target: {fileID: 0}
     moveToPosition: {x: 100, y: 0, z: 0}
-    startPos: {x: -55.79, y: 0, z: 63.21}
-    isTouchingPlayer: 0
+    isAimedOnPlayer: 0
     attackRange: 8
-  viewPosition: {x: -39, y: -186, z: 0}
+    reserveAttackRange: 2
+  viewPosition: {x: 137, y: -45, z: 0}
   viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
@@ -62,9 +62,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
     - rid: 3643188194731098119
@@ -77,9 +77,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -96,9 +96,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: Where it all begins!
         drawGizmos: 0
         child:
@@ -113,9 +113,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: Repeat forever
         drawGizmos: 0
         child:
@@ -132,9 +132,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         stoppingDistance: 0.1
@@ -148,9 +148,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -166,9 +166,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -186,9 +186,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: FindTarget
         drawGizmos: 0
         children:
@@ -204,9 +204,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
     - rid: 5970866296919687171
@@ -219,9 +219,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: Chasing
         drawGizmos: 0
         children:
@@ -237,9 +237,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -255,9 +255,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         message: Patrol
@@ -271,9 +271,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
     - rid: 5970866357830418437
@@ -286,9 +286,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
     - rid: 5970866357830418441
@@ -301,9 +301,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         duration: 1.5
@@ -317,9 +317,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: Wait for refresh target position
         drawGizmos: 0
         duration: 0.1
@@ -333,9 +333,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         children:
@@ -351,15 +351,15 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 'Attack
 
 '
         drawGizmos: 0
         children:
-        - rid: 5970866365120905232
+        - rid: 5970866422736486402
         - rid: 3643188194731098119
     - rid: 5970866365120905221
       type: {class: Wait, ns: TheKiwiCoder, asm: Assembly-CSharp}
@@ -371,9 +371,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: Wait before attack
         drawGizmos: 0
         duration: 1
@@ -387,28 +387,12 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         message: I try to attack player
-    - rid: 5970866365120905232
-      type: {class: LogIfTouchPlayer, ns: TheKiwiCoder, asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: ec84c36d6bcd78c41aeb9613f260b2ab
-        position: {x: 571.27045, y: 1023}
-        blackboard:
-          target: {fileID: 0}
-          moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
-          attackRange: 2
-        description: 
-        drawGizmos: 0
-        message: I Touch Player
     - rid: 5970866365120905235
       type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
       data:
@@ -419,9 +403,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         child:
@@ -438,9 +422,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         child:
@@ -457,9 +441,9 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0
         child:
@@ -474,8 +458,23 @@ MonoBehaviour:
         blackboard:
           target: {fileID: 0}
           moveToPosition: {x: 0, y: 0, z: 0}
-          startPos: {x: 0, y: 0, z: 0}
-          isTouchingPlayer: 0
+          isAimedOnPlayer: 0
           attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+    - rid: 5970866422736486402
+      type: {class: AimedOnPlayer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 5cddf34f2a757d04f922dda00dc50046
+        position: {x: 571.0001, y: 1023.00006}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
         description: 
         drawGizmos: 0

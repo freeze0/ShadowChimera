@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace TheKiwiCoder {
 
@@ -12,8 +13,8 @@ namespace TheKiwiCoder {
 	{
 		public Transform target;
 		public Vector3 moveToPosition;
-		public Vector3 startPos;
-		public bool isTouchingPlayer;
-        public float attackRange = 2f;
+		public bool isAimedOnPlayer;
+        public float attackRange = 8f;
+        public float reserveAttackRange = 8f;
     }
 }

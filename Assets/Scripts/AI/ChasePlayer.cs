@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using TheKiwiCoder;
 using Unity.VisualScripting;
@@ -11,7 +12,7 @@ public class ChasePlayer : ActionNode
 {
 	protected override void OnStart()
 	{
-		blackboard.isTouchingPlayer = false;
+		blackboard.isAimedOnPlayer = false;
 		context.agent.isStopped = false;
 		context.agent.stoppingDistance = blackboard.attackRange;
 		context.agent.SetDestination(blackboard.target.position);
@@ -37,10 +38,9 @@ public class ChasePlayer : ActionNode
 		
 		if (agent.remainingDistance <= blackboard.attackRange)
 		{
-			blackboard.isTouchingPlayer = true; // уменьшать радиус атаки если рейкастом не попадаем по игроку
+			blackboard.isAimedOnPlayer = true; // уменьшать радиус атаки если рейкастом не попадаем по игроку
 		}
-		
-		
+		//Debug.Log($"{}");
 		return State.Success;
 	}
 }
