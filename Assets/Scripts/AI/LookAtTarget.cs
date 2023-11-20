@@ -9,7 +9,7 @@ namespace ShadowChimera.AI
 		private Transform m_agentTransform;
 		protected override void OnStart()
 		{
-			m_layerMask = LayerMask.GetMask("Projectile");
+			m_layerMask = LayerMask.GetMask("Projectile"); // надо потом разобраться
 			m_agentTransform = context.agent.transform;
 		}
 
@@ -22,20 +22,21 @@ namespace ShadowChimera.AI
 			RaycastHit hit;
 			Vector3 fwd = m_agentTransform.TransformDirection(Vector3.forward);
 			if (Physics.Raycast( m_agentTransform.position,  
-				    m_agentTransform.TransformDirection(Vector3.forward), out hit, 100))
+				    m_agentTransform.TransformDirection(Vector3.forward), out hit, 100, ~m_layerMask))
 			{
-				if (hit.transform.CompareTag("Player"))
-				{
-					blackboard.attackRange = blackboard.reserveAttackRange;
-					Debug.DrawRay(m_agentTransform.position, 
-						m_agentTransform.TransformDirection(Vector3.forward) * 100, Color.red);
-					Debug.Log("Did not Hit");
-				}
-				else
+				if (!hit.transform.CompareTag("Player"))
 				{
 					blackboard.attackRange = 0.1f;
 					Debug.DrawRay(m_agentTransform.position, 
-						m_agentTransform.TransformDirection(Vector3.forward) * hit.distance, Color.white);
+						m_agentTransform.TransformDirection(Vector3.forward) * 100, Color.white);
+					Debug.Log("Did not Hit");
+					
+				}
+				else
+				{
+					blackboard.attackRange = blackboard.reserveAttackRange;
+					Debug.DrawRay(m_agentTransform.position, 
+						m_agentTransform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
 					Debug.Log("Did Hit");
 				}
 			}
