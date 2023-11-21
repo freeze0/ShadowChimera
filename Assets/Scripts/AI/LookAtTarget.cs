@@ -1,4 +1,5 @@
 using TheKiwiCoder;
+using TMPro;
 using UnityEngine;
 
 namespace ShadowChimera.AI
@@ -7,11 +8,14 @@ namespace ShadowChimera.AI
 	{
 		private LayerMask m_layerMask;
 		private Transform m_agentTransform;
-		protected override void OnStart()
+        private float m_angularSpeed;
+
+        protected override void OnStart()
 		{
-			m_layerMask = LayerMask.GetMask("Projectile"); // надо потом разобраться
+			m_layerMask = LayerMask.GetMask("Projectile");
 			m_agentTransform = context.agent.transform;
-		}
+            m_angularSpeed = context.agent ? context.agent.angularSpeed : 360f;
+        }
 
 		protected override void OnStop()
 		{
@@ -19,7 +23,8 @@ namespace ShadowChimera.AI
 
 		protected override State OnUpdate()
 		{
-			RaycastHit hit;
+            var targetPosition = blackboard.target.position;
+            RaycastHit hit;
 			Vector3 fwd = m_agentTransform.TransformDirection(Vector3.forward);
 			if (Physics.Raycast( m_agentTransform.position,  
 				    m_agentTransform.TransformDirection(Vector3.forward), out hit, 100, ~m_layerMask))
@@ -29,7 +34,7 @@ namespace ShadowChimera.AI
 					blackboard.attackRange = 0.1f;
 					Debug.DrawRay(m_agentTransform.position, 
 						m_agentTransform.TransformDirection(Vector3.forward) * 100, Color.white);
-					Debug.Log("Did not Hit");
+					//Debug.Log("Did not Hit");
 					
 				}
 				else
@@ -37,15 +42,17 @@ namespace ShadowChimera.AI
 					blackboard.attackRange = blackboard.reserveAttackRange;
 					Debug.DrawRay(m_agentTransform.position, 
 						m_agentTransform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
-					Debug.Log("Did Hit");
+					//Debug.Log("Did Hit");
 				}
 			}
-			
-			//плавный поворот доделать
-			var targetPosition = blackboard.target.position;
-			targetPosition.y = context.transform.position.y;
-			context.transform.LookAt(targetPosition, Vector3.up);
-			return State.Success;
+
+            var contextTr = context.transform;
+            var contextPosition = contextTr.position;
+
+            targetPosition.y = contextPosition.y;
+            var dir = targetPosition - contextPosition;
+            contextTr.rotation = Quaternion.RotateTowards(contextTr.rotation, Quaternion.LookRotation(dir), m_angularSpeed * Time.deltaTime);
+            return State.Success;
 		}
 	}
 }

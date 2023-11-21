@@ -47,7 +47,7 @@ MonoBehaviour:
     isAimedOnPlayer: 0
     attackRange: 2.5
     reserveAttackRange: 2.5
-  viewPosition: {x: 7, y: 44, z: 0}
+  viewPosition: {x: 66, y: 41, z: 0}
   viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2

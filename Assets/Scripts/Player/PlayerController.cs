@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
@@ -10,7 +11,7 @@ namespace ShadowChimera
 		[SerializeField] private CharacterController m_characterController;
 		[SerializeField] private Transform m_cameraTarget;
 		[SerializeField] private Transform m_cameraTransform;
-		/*[SerializeField] private EnemyAttack m_attack;*/
+		[SerializeField] private AttackManager m_attackManager;
 		
 		[SerializeField] private float m_rotationSmoothTime = 0.12f;
 		[SerializeField] private float m_speedChangeRate = 10f;
@@ -28,27 +29,34 @@ namespace ShadowChimera
 		private InputActionMap m_playerMap;
 		private InputAction m_moveAction;
 		private InputAction m_lookAction;
-		/*private InputAction m_attackAction;*/
+        private InputAction m_fireAction;
+
+        private bool m_canLook = true;
+
+		public AttackManager attackManager => m_attackManager;
 
 
-		private void Awake()
+        private void Awake()
 		{
 			m_playerMap = m_inputActionAsset.FindActionMap("Player");
 			m_moveAction = m_playerMap.FindAction("Move");
 			m_lookAction = m_playerMap.FindAction("Look");
-			/*m_attackAction = m_playerMap.FindAction("Fire");*/
-		}
+            m_fireAction = m_playerMap.FindAction("Fire");
+
+            m_canLook = true;
+        }
 
 		private void OnEnable()
 		{
 			m_playerMap.Enable();
-			//m_attackAction.performed += context => m_attack.Shoot();
-		}
+            m_fireAction.performed += OnFireInput;
+            m_canLook = true;
+        }
 
 		private void OnDisable()
 		{
-			m_playerMap.Disable();
-			//m_attackAction.performed -= context => m_attack.Shoot();
+            m_fireAction.performed -= OnFireInput;
+            m_playerMap.Disable();
 		}
 
 		private void Update()
@@ -57,9 +65,25 @@ namespace ShadowChimera
 			Move(move, false);
 		}
 
+		public void OnFireInput(InputAction.CallbackContext context)
+		{
+			Debug.Log("Try Fire");
+			//this.attackManager.Next();
+		}
+
 		private void LateUpdate()
 		{
-			Vector2 look = m_lookAction.ReadValue<Vector2>();
+           /* if (EventSystem.current.currentInputModule.input.GetMouseButtonDown(0))
+            {
+                m_canLook = !EventSystem.current.IsPointerOverGameObject();
+            }
+            else if (EventSystem.current.currentInputModule.input.GetMouseButtonUp(0))
+            {
+                m_canLook = true;
+            }*/
+
+
+            var look = m_canLook ? m_lookAction.ReadValue<Vector2>() : Vector2.zero;
 			CameraRotation(look);
 		}
 
@@ -163,5 +187,6 @@ namespace ShadowChimera
 			//либо большее если больше промежутка
 			return Mathf.Clamp(angle, min, max);
 		}
+
 	}
 }
