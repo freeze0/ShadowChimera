@@ -22,6 +22,7 @@ namespace ShadowChimera
 		private InputAction m_moveAction;
 		private InputAction m_lookAction;
 		private InputAction m_fireAction;
+		private InputAction m_swapWeapon;
 
 		private bool m_canLook = true;
 			
@@ -31,6 +32,7 @@ namespace ShadowChimera
 			m_moveAction = m_playerMap.FindAction("Move");
 			m_lookAction = m_playerMap.FindAction("Look");
 			m_fireAction = m_playerMap.FindAction("Fire");
+			m_swapWeapon = m_playerMap.FindAction("Swap");
 		}
 
 		private void OnEnable()
@@ -39,6 +41,7 @@ namespace ShadowChimera
 
 			m_fireAction.started += OnFireInputStarted;
 			m_fireAction.canceled += OnFireInputCanceled;
+			m_swapWeapon.performed += SwapWeapon;
 
 			m_canLook = true;
 		}
@@ -50,6 +53,7 @@ namespace ShadowChimera
 
 			m_fireAction.started -= OnFireInputStarted;
 			m_fireAction.canceled -= OnFireInputCanceled;
+			m_swapWeapon.performed -= SwapWeapon;
 		}
 
 		private void OnFireInputStarted(InputAction.CallbackContext context)
@@ -60,6 +64,11 @@ namespace ShadowChimera
 		private void OnFireInputCanceled(InputAction.CallbackContext context)
 		{
 			m_character.attackManager.EndUse();
+		}
+
+		private void SwapWeapon(InputAction.CallbackContext context)
+		{
+			m_character.attackManager.Next();
 		}
 
 		private void Update()

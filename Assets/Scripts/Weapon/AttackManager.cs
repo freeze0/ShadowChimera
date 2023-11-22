@@ -20,11 +20,13 @@ namespace ShadowChimera
         {
             if (m_items.Count > 0)
             {
+                m_items[m_currentIndex].TurnOff();
                 m_currentIndex++;
-                if (m_currentIndex > m_items.Count)
+                if (m_currentIndex >= m_items.Count)
                 {
                     m_currentIndex = 0;
                 }
+                m_items[m_currentIndex].TurnOn();
             }
         }
 

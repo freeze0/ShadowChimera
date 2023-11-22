@@ -27,5 +27,15 @@ namespace ShadowChimera
         public void EndUse()
         {
         }
+
+        public void TurnOff()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void TurnOn()
+        {
+            gameObject.SetActive(true);
+        }
     }
 }

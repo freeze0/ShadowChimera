@@ -8,5 +8,9 @@ namespace ShadowChimera
     {
         void StartUse();
         void EndUse();
+
+        void TurnOff();
+
+        void TurnOn();
     }
 }
