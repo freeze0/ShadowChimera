@@ -7,16 +7,24 @@ namespace TheKiwiCoder {
     [System.Serializable]
     public class AttackAction : ActionNode
     {
+        private AttackManager m_attackManager;
         protected override void OnStart()
         {
-            /*var atk = context.agent.GetComponent<EnemyAttack>();*/
+            if (m_attackManager == null)
+            {
+                m_attackManager = context.gameObject.GetComponent<AttackManager>();
+            }
         }
 
         protected override void OnStop() {
         }
 
         protected override State OnUpdate() {
-            context.enemyAttack.Shoot();
+            if (m_attackManager != null)
+            {
+                m_attackManager.StartUse();
+                m_attackManager.EndUse();
+            }
             return State.Success;
         }
     }

@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5138283520677574742}
   - component: {fileID: 8307232963831181964}
   - component: {fileID: 8465032352854147778}
-  - component: {fileID: -7105628289275366396}
+  - component: {fileID: 6286357809887277705}
+  - component: {fileID: 2239071978547056266}
   m_Layer: 7
   m_Name: Bullet
   m_TagString: Untagged
@@ -134,7 +135,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-7105628289275366396
+--- !u!114 &6286357809887277705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +144,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 2393316542524500278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac703167eb53063448a5390b35535837, type: 3}
+  m_Script: {fileID: 11500000, guid: fc75381f309cb1841a42355d45310f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 1
+  m_force: 50
+  m_lifeTime: 2.5
+  m_damage: 10
+--- !u!114 &2239071978547056266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2393316542524500278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0.5}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_FadeFactor: 1

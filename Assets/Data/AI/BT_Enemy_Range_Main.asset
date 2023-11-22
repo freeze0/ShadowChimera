@@ -1,0 +1,483 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: BT_Enemy_Range_Main
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 4200190926137589867
+  nodes:
+  - rid: 4200190926137589867
+  - rid: 4200190926137589870
+  - rid: 4200190926137589873
+  - rid: 3643188037927305217
+  - rid: 5970866292629438464
+  - rid: 5970866292629438465
+  - rid: 5970866292629438466
+  - rid: 5970866292629438467
+  - rid: 5970866320039739393
+  - rid: 5970866357830418432
+  - rid: 5970866357830418437
+  - rid: 5970866357830418441
+  - rid: 5970866365120905219
+  - rid: 5970866365120905220
+  - rid: 5970866365120905221
+  - rid: 5970866365120905235
+  - rid: 3643188194731098119
+  - rid: 5970866410769088516
+  - rid: 5970866422736486403
+  - rid: 5970866422736486407
+  - rid: 5970866422736486408
+  - rid: 5970866422736486409
+  - rid: 5970866427221770244
+  - rid: 5970866427221770245
+  - rid: 5970866427221770246
+  treeState: 0
+  blackboard:
+    target: {fileID: 0}
+    moveToPosition: {x: 100, y: 0, z: 0}
+    isAimedOnPlayer: 0
+    attackRange: 8
+    reserveAttackRange: 8
+  viewPosition: {x: 84, y: -82, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3643188037927305217
+      type: {class: NextPointsAction, ns: ShadowChimera, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 5923486915e91614784c2cefc1030bc4
+        position: {x: 1298, y: 375.99997}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+    - rid: 3643188194731098119
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: b7627374bda9922428e1ce183de54499
+        position: {x: 656.008, y: 1099}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: Attack
+        drawGizmos: 0
+        children:
+        - rid: 5970866365120905221
+        - rid: 5970866410769088516
+    - rid: 4200190926137589867
+      type: {class: RootNode, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 08babbf2-251b-4019-9d8e-2f9fc5bc6b8b
+        position: {x: 723, y: -395.12}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: Where it all begins!
+        drawGizmos: 0
+        child:
+          rid: 4200190926137589870
+    - rid: 4200190926137589870
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: dcafe99d707d250419e5d8ff0ada012e
+        position: {x: 723, y: -235}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: Repeat forever
+        drawGizmos: 0
+        child:
+          rid: 5970866292629438464
+        restartOnSuccess: 1
+        restartOnFailure: 1
+    - rid: 4200190926137589873
+      type: {class: MoveToPosition, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 6d43e0274b9a6b647a32a83ae71f5c62
+        position: {x: 1447.9999, y: 375.99997}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        stoppingDistance: 0.1
+    - rid: 5970866292629438464
+      type: {class: InterruptSelector, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 6176f91500d51774ba35c230bc7c6311
+        position: {x: 722.99994, y: -94.99989}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 5970866320039739393
+        - rid: 5970866292629438465
+    - rid: 5970866292629438465
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: aad2b1dc11f09b04bb7d67cba7901ee0
+        position: {x: 1223, y: 151.99998}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 5970866357830418441
+        - rid: 5970866357830418432
+        - rid: 3643188037927305217
+        - rid: 4200190926137589873
+    - rid: 5970866292629438466
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 7919484aad68ace4b95ab98f62394df3
+        position: {x: -40.999924, y: 502.99997}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: FindTarget
+        drawGizmos: 0
+        children:
+        - rid: 5970866292629438467
+        - rid: 5970866357830418437
+    - rid: 5970866292629438467
+      type: {class: FindTargetAction, ns: ShadowChimera, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: bb3c90f8acd9ce648878e37f764e128e
+        position: {x: -116.00001, y: 693.99994}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+    - rid: 5970866320039739393
+      type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: bb8d4d018bf539745ba8117505c3cab4
+        position: {x: 193.84837, y: 151.99995}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 5970866365120905235
+        - rid: 5970866365120905219
+    - rid: 5970866357830418432
+      type: {class: Log, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: d3de204d9be82fb4380efb324609b453
+        position: {x: 1148.0001, y: 375.99997}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        message: Patrol
+    - rid: 5970866357830418437
+      type: {class: LookAtTarget, ns: ShadowChimera.AI, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: a98d9ef97b64f794684dec8117582553
+        position: {x: 34.00004, y: 693.99994}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+    - rid: 5970866357830418441
+      type: {class: Wait, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: b5205de71a19fa64589e5e7668c951be
+        position: {x: 997.99994, y: 375.99997}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        duration: 1.5
+    - rid: 5970866365120905219
+      type: {class: Parallel, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: b09e9dc3cf8c0734bb4dcd02137ba7eb
+        position: {x: 431.0079, y: 332}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 5970866427221770244
+        - rid: 5970866427221770245
+    - rid: 5970866365120905220
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 869686bd05d0bc949aa8220baaef9289
+        position: {x: 581.00793, y: 884}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 'Check if player in attack range
+
+
+'
+        drawGizmos: 0
+        children:
+        - rid: 5970866422736486403
+        - rid: 3643188194731098119
+    - rid: 5970866365120905221
+      type: {class: Wait, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 764fb62534da12341b862c9cda13a41d
+        position: {x: 580.99994, y: 1289.9996}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: Wait before attack
+        drawGizmos: 0
+        duration: 1
+    - rid: 5970866365120905235
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 15dd08f4465577447bb35ae49a8ebced
+        position: {x: -41.15158, y: 331.99994}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 5970866292629438466
+        restartOnSuccess: 1
+        restartOnFailure: 0
+    - rid: 5970866410769088516
+      type: {class: AttackAction, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 9b73d7b5a1e7b3e46b0775730d665257
+        position: {x: 731, y: 1290.3226}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+    - rid: 5970866422736486403
+      type: {class: AimedOnPlayer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 2428df7ab328db748b618431bb803d9e
+        position: {x: 506.00793, y: 1099}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+    - rid: 5970866422736486407
+      type: {class: Wait, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 1c2f91a4f03220c44a099ee805d852ef
+        position: {x: 356.00793, y: 884}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        duration: 0.1
+    - rid: 5970866422736486408
+      type: {class: ChasePlayer, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 480782955ee7f7a4fbed2bfa0803f525
+        position: {x: 206.00792, y: 884}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+    - rid: 5970866422736486409
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 26c13a01f5a6b3d47a7f2b1fc0c86712
+        position: {x: 281.008, y: 694}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 5970866422736486408
+        - rid: 5970866422736486407
+    - rid: 5970866427221770244
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 5c69d2895d419d24f91d907fe25abd0f
+        position: {x: 281.008, y: 503}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 5970866422736486409
+        restartOnSuccess: 1
+        restartOnFailure: 0
+    - rid: 5970866427221770245
+      type: {class: Repeat, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: e79c63fd304201e4daaa2155c9e11522
+        position: {x: 581.00793, y: 503}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 5970866427221770246
+        restartOnSuccess: 1
+        restartOnFailure: 0
+    - rid: 5970866427221770246
+      type: {class: Succeed, ns: TheKiwiCoder, asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: fb0e98e11005fb7458840fc3b580d4fc
+        position: {x: 581.00793, y: 694}
+        blackboard:
+          target: {fileID: 0}
+          moveToPosition: {x: 0, y: 0, z: 0}
+          isAimedOnPlayer: 0
+          attackRange: 2
+          reserveAttackRange: 2
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 5970866365120905220
