@@ -30,7 +30,7 @@ namespace ShadowChimera
             }
         }
 
-        public void StartUse()
+        public void StartUseWeapon()
         {
             if (m_currentIndex >= 0) 
             { 
@@ -38,7 +38,7 @@ namespace ShadowChimera
             }
         }
 
-        public void EndUse()
+        public void EndUseWeapon()
         {
             m_items[m_currentIndex].EndUse();
         }

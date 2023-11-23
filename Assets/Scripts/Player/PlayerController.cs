@@ -58,12 +58,12 @@ namespace ShadowChimera
 
 		private void OnFireInputStarted(InputAction.CallbackContext context)
 		{
-			m_character.attackManager.StartUse();
+			m_character.attackManager.StartUseWeapon();
 		}
 
 		private void OnFireInputCanceled(InputAction.CallbackContext context)
 		{
-			m_character.attackManager.EndUse();
+			m_character.attackManager.EndUseWeapon();
 		}
 
 		private void SwapWeapon(InputAction.CallbackContext context)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ShadowChimera
 {
-    public interface IAttackItem 
+    public interface IAttackItem
     {
         void StartUse();
         void EndUse();

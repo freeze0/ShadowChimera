@@ -52,7 +52,7 @@ namespace ShadowChimera
             gameObject.SetActive(true);
         }
         
-        private IEnumerator StartAttack() // сделать возвращение сразу после того, как опускает
+        private IEnumerator StartAttack()
         {
             Debug.Log("StartAttack");
             var waitForSeconds = new WaitForSeconds(m_refreshTime);
