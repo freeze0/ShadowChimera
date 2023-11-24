@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace ShadowChimera
 {
-    public class Sword : MonoBehaviour, IAttackItem
+    public class Sword : AttackItem
     {
         [SerializeField] private float m_refreshTime = 0.001f;
         [SerializeField] private float m_speed = 600.0f;
@@ -22,7 +22,7 @@ namespace ShadowChimera
             m_EndCoroutine = StartCoroutine(EndAttack());
         }
 
-        public void StartUse()
+        public override void StartUse()
         {
             if (m_EndCoroutine != null)
             {
@@ -32,7 +32,7 @@ namespace ShadowChimera
             }
         }
 
-        public void EndUse()
+        public override void EndUse()
         {
             if (m_AttackCoroutine != null)
             {
@@ -42,15 +42,6 @@ namespace ShadowChimera
             }
         }
 
-        public void TurnOff()
-        {
-            gameObject.SetActive(false);
-        }
-
-        public void TurnOn()
-        {
-            gameObject.SetActive(true);
-        }
         
         private IEnumerator StartAttack()
         {

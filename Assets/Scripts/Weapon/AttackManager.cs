@@ -6,7 +6,7 @@ namespace ShadowChimera
 {
     public class AttackManager : MonoBehaviour
     {
-        private List<IAttackItem> m_items = new();
+        private List<AttackItem> m_items = new();
         private int m_currentIndex = -1;
 
         private void Start()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ShadowChimera
 {
-    public class AutomaticRifle : MonoBehaviour, IAttackItem
+    public class AutomaticRifle :AttackItem
     {
 
         [SerializeField] private BulletComponent m_prefab;
@@ -14,7 +14,7 @@ namespace ShadowChimera
         private Coroutine m_fireCoroutine;
 
 
-        public void EndUse()
+        public override void EndUse()
         {
             Debug.Log("End Use", this);
 
@@ -25,7 +25,7 @@ namespace ShadowChimera
             }
         }
 
-        public void StartUse()
+        public override void StartUse()
         {
             Debug.Log("Start Use", this);
 
@@ -44,14 +44,6 @@ namespace ShadowChimera
             while(true);
         }
         
-        public void TurnOff()
-        {
-            gameObject.SetActive(false);
-        }
 
-        public void TurnOn()
-        {
-            gameObject.SetActive(true);
-        }
     }
 }
