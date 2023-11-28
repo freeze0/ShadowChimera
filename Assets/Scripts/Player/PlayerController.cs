@@ -23,8 +23,9 @@ namespace ShadowChimera
 		private InputAction m_lookAction;
 		private InputAction m_fireAction;
 		private InputAction m_swapWeapon;
+        private InputAction m_reloadAction;
 
-		private bool m_canLook = true;
+        private bool m_canLook = true;
 			
 		private void Awake()
 		{
@@ -33,6 +34,7 @@ namespace ShadowChimera
 			m_lookAction = m_playerMap.FindAction("Look");
 			m_fireAction = m_playerMap.FindAction("Fire");
 			m_swapWeapon = m_playerMap.FindAction("Swap");
+			m_reloadAction = m_playerMap.FindAction("Reload");
 		}
 
 		private void OnEnable()
@@ -42,8 +44,9 @@ namespace ShadowChimera
 			m_fireAction.started += OnFireInputStarted;
 			m_fireAction.canceled += OnFireInputCanceled;
 			m_swapWeapon.performed += SwapWeapon;
+            m_reloadAction.performed += ReloadWeapon;
 
-			m_canLook = true;
+            m_canLook = true;
 		}
 
 
@@ -54,7 +57,8 @@ namespace ShadowChimera
 			m_fireAction.started -= OnFireInputStarted;
 			m_fireAction.canceled -= OnFireInputCanceled;
 			m_swapWeapon.performed -= SwapWeapon;
-		}
+            m_reloadAction.performed -= ReloadWeapon;
+        }
 
 		private void OnFireInputStarted(InputAction.CallbackContext context)
 		{
@@ -70,6 +74,11 @@ namespace ShadowChimera
 		{
 			m_character.attackManager.Next();
 		}
+
+		private void ReloadWeapon(InputAction.CallbackContext context)
+		{
+            m_character.attackManager.Reload();
+        }
 
 		private void Update()
 		{

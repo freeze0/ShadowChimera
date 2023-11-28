@@ -8,6 +8,7 @@ namespace ShadowChimera
     {
         public abstract void StartUse();
         public abstract void EndUse();
+        public abstract void Reload();
 
         public void TurnOff()
         {
@@ -18,5 +19,6 @@ namespace ShadowChimera
         {
             gameObject.SetActive(true);
         }
+
     }
 }

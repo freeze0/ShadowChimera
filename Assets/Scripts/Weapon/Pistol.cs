@@ -11,6 +11,7 @@ namespace ShadowChimera
         [SerializeField] private float m_damage = 10.0f;
         [SerializeField] private GameObject m_decal;
         [SerializeField] private Vector3 m_offset = new Vector3(0,1.5f,0);
+
         public override void StartUse()
         {
             Debug.Log("Peef");
@@ -32,6 +33,8 @@ namespace ShadowChimera
         {
         }
 
-
+        public override void Reload()
+        {
+        }
     }
 }

@@ -70,6 +70,10 @@ namespace ShadowChimera
             } 
             while (true);
         }
-        
+
+        public override void Reload()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
