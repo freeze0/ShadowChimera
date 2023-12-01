@@ -95,15 +95,17 @@ namespace ShadowChimera
 		private void LateUpdate()
 		{
 			// Обработка мыши и UI
-			/*if (EventSystem.current.currentInputModule.input.GetMouseButtonDown(0))
+			if (EventSystem.current.currentInputModule.input.GetMouseButtonDown(0))
 			{
 				m_canLook = !EventSystem.current.IsPointerOverGameObject();
+				Debug.Log($" m_canLook = {m_canLook}");
 			}
 			else if (EventSystem.current.currentInputModule.input.GetMouseButtonUp(0))
 			{
 				m_canLook = true;
-			}*/
-			
+                Debug.Log($" m_canLook = {m_canLook}");
+            }
+
 
 			var look = m_canLook ? m_lookAction.ReadValue<Vector2>() : Vector2.zero;
 			CameraRotation(look);
